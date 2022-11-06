@@ -19,9 +19,14 @@
 	name = "stamp spawner"
 	icon_state = "stamp"
 	loot = list(
-		/obj/item/stamp = 3,
-		/obj/item/stamp/denied = 1,
+		/obj/item/stamp/test,
+		/obj/item/stamp/bigtest,
+		/obj/item/stamp/minitest,
 	)
+
+/obj/effect/spawner/random/bureaucracy/stamp/all
+	name = "all loot stamp spawner"
+	spawn_all_loot = TRUE
 
 /obj/effect/spawner/random/bureaucracy/crayon
 	name = "crayon spawner"

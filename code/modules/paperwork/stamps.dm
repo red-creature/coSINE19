@@ -99,5 +99,20 @@
 	icon_state = "stamp-syndicate"
 	dye_color = DYE_SYNDICATE
 
+/obj/item/stamp/test
+	name = "Test rubber stamp"
+	icon_state = "stamp-test"
+	desc = "A stamp for testing inkpads and training proper stamp application."
+
+/obj/item/stamp/bigtest
+	name = "Big test rubber stamp"
+	icon_state = "stamp-bigtest"
+	desc = "A misprint of 2 smaller test stamps that somehow fused into a bigger one."
+
+/obj/item/stamp/minitest
+	name = "Mini test rubber stamp"
+	icon_state = "stamp-minitest"
+	desc = "A children's stamp for good behavior."
+
 /obj/item/stamp/attack_paw(mob/user, list/modifiers)
 	return attack_hand(user, modifiers)
