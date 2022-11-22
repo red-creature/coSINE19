@@ -1,5 +1,7 @@
 <!-- Most valid html will work in here, excluding images. -->
 
-<h1>Welcome to Space Station 13!</h1>
+<h1>Welcome to coSINE19!</h1>
 
-<i>This server is running a /tg/station 13 Git build.</i>
+<i>This server is running a /tg/station 13 Git build, specifically the Skyrat-TG ditty.</i>
+
+<i>While you may be concerned about ERP content, these are turned off in the config. Sexual content is still disallowed. I'm too lazy to put in the crunch time tonight to fully root these out of the code without breaking things, so this'll have to do for now. Sorry.</i>
