@@ -1,0 +1,356 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"bT" = (
+/obj/machinery/light/directional/west,
+/obj/machinery/computer{
+	desc = "This WAS a helmsman's console, before it became a coffee's console."
+	},
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/iron/dark/smooth_large,
+/area/shuttle/supply/cockpit)
+"cE" = (
+/turf/closed/wall/mineral/titanium/spaceship,
+/area/shuttle/supply)
+"do" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/turf_decal/tile/neutral/diagonal_edge,
+/obj/effect/turf_decal/tile/neutral/diagonal_centre,
+/obj/effect/turf_decal/box/white/corners,
+/turf/open/floor/iron/dark/diagonal,
+/area/shuttle/supply)
+"ds" = (
+/obj/docking_port/mobile/supply,
+/obj/machinery/door/airlock/grunge{
+	name = "Supply Shuttle Airlock";
+	req_access = list("cargo")
+	},
+/obj/effect/turf_decal/delivery/white,
+/turf/open/floor/iron/dark/smooth_large,
+/area/shuttle/supply)
+"go" = (
+/obj/machinery/button/door/directional/east{
+	id = "QMLoaddoor2";
+	name = "Loading Doors";
+	pixel_y = 8
+	},
+/obj/machinery/button/door/directional/east{
+	id = "QMLoaddoor";
+	name = "Loading Doors";
+	pixel_y = -8
+	},
+/obj/machinery/light/directional/east,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/iron/shuttle/cargo,
+/area/shuttle/supply)
+"jb" = (
+/obj/machinery/power/shuttle_engine/propulsion,
+/obj/effect/turf_decal/stripes/line,
+/obj/structure/fluff/metalpole/end{
+	pixel_y = -32
+	},
+/turf/open/floor/plating/airless,
+/area/shuttle/supply)
+"kz" = (
+/obj/machinery/light/directional/west,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/turf_decal/tile/neutral/diagonal_edge,
+/obj/effect/turf_decal/tile/neutral/diagonal_centre,
+/turf/open/floor/iron/dark/diagonal,
+/area/shuttle/supply)
+"lz" = (
+/obj/machinery/light/directional/north,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/iron/shuttle/cargo,
+/area/shuttle/supply)
+"me" = (
+/obj/structure/marker_beacon/burgundy,
+/obj/structure/fluff/metalpole/end{
+	dir = 1;
+	pixel_y = 32
+	},
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/shuttle/supply/cockpit)
+"mp" = (
+/turf/closed/wall/mineral/titanium/spaceship/nodiagonal,
+/area/shuttle/supply)
+"mP" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/turf_decal/tile/neutral/diagonal_edge,
+/obj/effect/turf_decal/tile/neutral/diagonal_centre,
+/obj/effect/turf_decal/box/white/corners{
+	dir = 8
+	},
+/turf/open/floor/iron/dark/diagonal,
+/area/shuttle/supply)
+"ob" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/turf_decal/tile/neutral/diagonal_edge,
+/obj/effect/turf_decal/tile/neutral/diagonal_centre,
+/turf/open/floor/iron/dark/diagonal,
+/area/shuttle/supply)
+"qx" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/turf_decal/caution/white{
+	dir = 8
+	},
+/turf/open/floor/iron/shuttle/cargo,
+/area/shuttle/supply)
+"qN" = (
+/obj/structure/chair/comfy/shuttle{
+	dir = 1
+	},
+/obj/structure/closet/emcloset/wall{
+	pixel_x = -28
+	},
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/item/radio/intercom/directional/south,
+/turf/open/floor/iron/shuttle/cargo,
+/area/shuttle/supply/cockpit)
+"rY" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/turf_decal/tile/neutral/diagonal_edge,
+/obj/effect/turf_decal/tile/neutral/diagonal_centre,
+/obj/effect/turf_decal/box/white/corners{
+	dir = 1
+	},
+/turf/open/floor/iron/dark/diagonal,
+/area/shuttle/supply)
+"rZ" = (
+/obj/structure/marker_beacon/olive,
+/obj/structure/fluff/metalpole/end{
+	dir = 1;
+	pixel_y = 32
+	},
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/shuttle/supply)
+"sa" = (
+/obj/structure/table/reinforced,
+/obj/item/paper/crumpled/muddy{
+	default_raw_text = "Toddy spilled his damn coffee all over the console, don't expect to manually pilot the Consign until we can get a repair guy. Which, uh, might be a while..."
+	},
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/iron/dark/smooth_large,
+/area/shuttle/supply/cockpit)
+"uk" = (
+/obj/machinery/conveyor{
+	dir = 8;
+	id = "QMLoad"
+	},
+/obj/machinery/door/poddoor{
+	id = "QMLoaddoor";
+	name = "Supply Dock Loading Door"
+	},
+/turf/open/floor/plating,
+/area/shuttle/supply)
+"uI" = (
+/obj/effect/spawner/structure/window/reinforced/shuttle,
+/turf/open/floor/plating,
+/area/shuttle/supply/cockpit)
+"wR" = (
+/obj/machinery/door/airlock/grunge{
+	name = "Supply Shuttle Airlock";
+	req_access = list("cargo")
+	},
+/obj/effect/turf_decal/delivery/white,
+/turf/open/floor/iron/dark/smooth_large,
+/area/shuttle/supply)
+"zQ" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/turf_decal/loading_area/white{
+	dir = 8
+	},
+/turf/open/floor/iron/shuttle/cargo,
+/area/shuttle/supply)
+"Ho" = (
+/obj/structure/fluff/metalpole/end{
+	pixel_y = -32
+	},
+/turf/closed/wall/mineral/titanium/spaceship/nodiagonal,
+/area/shuttle/supply)
+"Is" = (
+/obj/machinery/power/shuttle_engine/propulsion,
+/obj/effect/turf_decal/stripes/line,
+/turf/open/floor/plating/airless,
+/area/shuttle/supply)
+"Iw" = (
+/obj/structure/closet/shuttle/engivent{
+	pixel_y = -33
+	},
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/turf_decal/tile/neutral/diagonal_edge,
+/obj/effect/turf_decal/tile/neutral/diagonal_centre,
+/obj/effect/turf_decal/box/white/corners,
+/turf/open/floor/iron/dark/diagonal,
+/area/shuttle/supply)
+"Jp" = (
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/shuttle/supply)
+"MI" = (
+/turf/closed/wall/mineral/titanium,
+/area/shuttle/supply/cockpit)
+"OZ" = (
+/obj/structure/window/reinforced/plasma/spawner/north,
+/obj/machinery/power/shuttle_engine/heater,
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/turf/open/floor/plating/airless,
+/area/shuttle/supply)
+"PA" = (
+/obj/structure/chair/comfy/shuttle{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/iron/shuttle/cargo,
+/area/shuttle/supply/cockpit)
+"Ro" = (
+/obj/machinery/door/airlock/grunge{
+	name = "Supply Shuttle Cockpit";
+	req_access = list("cargo")
+	},
+/obj/effect/turf_decal/delivery/white,
+/turf/open/floor/iron/dark/smooth_large,
+/area/shuttle/supply/cockpit)
+"Rr" = (
+/obj/structure/marker_beacon/burgundy,
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/shuttle/supply)
+"RT" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/iron/shuttle/cargo,
+/area/shuttle/supply)
+"TR" = (
+/obj/structure/marker_beacon/olive,
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/shuttle/supply)
+"Xq" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/turf_decal/tile/neutral/diagonal_edge,
+/obj/effect/turf_decal/tile/neutral/diagonal_centre,
+/obj/effect/turf_decal/box/white/corners{
+	dir = 4
+	},
+/turf/open/floor/iron/dark/diagonal,
+/area/shuttle/supply)
+"Xz" = (
+/obj/machinery/conveyor{
+	dir = 4;
+	id = "QMLoad2"
+	},
+/obj/machinery/door/poddoor{
+	id = "QMLoaddoor2";
+	name = "Supply Dock Loading Door"
+	},
+/turf/open/floor/plating,
+/area/shuttle/supply)
+"Ys" = (
+/turf/template_noop,
+/area/template_noop)
+"Zv" = (
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/shuttle/supply/cockpit)
+"Zz" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/turf_decal/loading_area/white{
+	dir = 4
+	},
+/turf/open/floor/iron/shuttle/cargo,
+/area/shuttle/supply)
+
+(1,1,1) = {"
+me
+Zv
+Zv
+Zv
+Jp
+Jp
+Jp
+Jp
+Jp
+Rr
+mp
+cE
+"}
+(2,1,1) = {"
+uI
+bT
+qN
+Zv
+rY
+kz
+mP
+RT
+rY
+mP
+OZ
+jb
+"}
+(3,1,1) = {"
+uI
+sa
+PA
+Zv
+ob
+ob
+ob
+RT
+ob
+ob
+OZ
+Is
+"}
+(4,1,1) = {"
+MI
+Zv
+Ro
+Zv
+Xq
+ob
+do
+RT
+Xq
+Iw
+mp
+Ho
+"}
+(5,1,1) = {"
+Ys
+Jp
+lz
+RT
+RT
+RT
+RT
+RT
+RT
+RT
+OZ
+Is
+"}
+(6,1,1) = {"
+Ys
+Jp
+RT
+Zz
+qx
+go
+qx
+zQ
+RT
+RT
+OZ
+jb
+"}
+(7,1,1) = {"
+Ys
+rZ
+Jp
+Xz
+wR
+Jp
+ds
+uk
+Jp
+TR
+mp
+cE
+"}
