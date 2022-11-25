@@ -988,7 +988,9 @@
 	dir = 8
 	},
 /obj/structure/closet/crate,
+/obj/item/clothing/sextoy/dildo,
 /obj/item/clothing/glasses/hypno,
+/obj/item/reagent_containers/cup/bottle/hexacrocin,
 /obj/item/key/lasso,
 /obj/item/reagent_containers/cup/bottle/morphine,
 /obj/item/gun/syringe/syndicate,
@@ -3213,6 +3215,7 @@
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/cargodise_freighter/mining)
 "VZ" = (
+/obj/machinery/vending/dorms,
 /turf/open/floor/wood,
 /area/ruin/space/has_grav/cargodise_freighter/quarters)
 "Wd" = (
