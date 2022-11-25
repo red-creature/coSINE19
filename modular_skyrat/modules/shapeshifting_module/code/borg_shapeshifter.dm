@@ -23,7 +23,7 @@
 	var/disguise_icon_override
 	var/disguise_pixel_offset = 0
 	var/disguise_hat_offset = 0
-	/// Traits unique to this model (deadsprite, wide/dogborginess, etc.). Mirrors the definition in modular_skyrat\modules\altborgs\code\modules\mob\living\silicon\robot\robot_model.dm
+	/// Traits unique to this model (deadsprite, etc.). Mirrors the definition in modular_skyrat\modules\altborgs\code\modules\mob\living\silicon\robot\robot_model.dm
 	var/list/disguise_model_features = list()
 	var/disguise_special_light_key
 	var/mob/listeningTo
@@ -172,9 +172,7 @@
 		var/list/details = disguise_model.borg_skins[skin]
 		var/image/reskin = image(icon = details[SKIN_ICON] || 'icons/mob/silicon/robots.dmi', icon_state = details[SKIN_ICON_STATE])
 		if (!isnull(details[SKIN_FEATURES]))
-			if (R_TRAIT_WIDE in details[SKIN_FEATURES])
-				reskin.pixel_x -= 16
-		reskin_icons[skin] = reskin
+			reskin_icons[skin] = reskin
 	var/borg_skin = show_radial_menu(cyborg, cyborg, reskin_icons, custom_check = CALLBACK(src, PROC_REF(check_menu), cyborg), radius = 38, require_near = TRUE)
 	if(!borg_skin)
 		return FALSE
@@ -211,8 +209,6 @@
 	user.bubble_icon = "robot"
 	active = TRUE
 	user.update_icons()
-	user.model.update_dogborg()
-	user.model.update_tallborg()
 
 	if(listeningTo == user)
 		return
@@ -236,8 +232,6 @@
 	user.bubble_icon = saved_bubble_icon
 	active = FALSE
 	user.update_icons()
-	user.model.update_dogborg()
-	user.model.update_tallborg()
 
 /obj/item/borg_shapeshifter/proc/disrupt(mob/living/silicon/robot/user)
 	SIGNAL_HANDLER

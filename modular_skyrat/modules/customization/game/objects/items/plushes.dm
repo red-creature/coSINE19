@@ -38,54 +38,6 @@
 	special_desc_jobs = list(JOB_ASSISTANT, JOB_HEAD_OF_SECURITY)
 	special_desc = "There's a pocket under the coat hiding a tiny picture of the medcat plushie and a tinier ribbon diamond ring. D'awww."
 
-/obj/item/toy/plush/skyrat/sechound
-	name = "sec-hound plushie"
-	desc = "An adorable stuffed toy of a SecHound, the trusty Nanotrasen sponsored security borg!"
-	icon_state = "plushie_securityk9"
-	attack_verb_continuous = list("beeps", "boops", "pings")
-	attack_verb_simple = list("beep", "boop", "ping")
-	squeak_override = list('sound/machines/beep.ogg' = 1)
-
-/obj/item/toy/plush/skyrat/medihound
-	name = "medi-hound plushie"
-	desc = "An adorable stuffed toy of a medihound."
-	icon_state = "plushie_medihound"
-	attack_verb_continuous = list("beeps", "boops", "pings")
-	attack_verb_simple = list("beep", "boop", "ping")
-	squeak_override = list('sound/machines/beep.ogg' = 1)
-
-/obj/item/toy/plush/skyrat/engihound
-	name = "engi-hound plushie"
-	desc = "An adorable stuffed toy of a engihound."
-	icon_state = "plushie_engihound"
-	attack_verb_continuous = list("beeps", "boops", "pings")
-	attack_verb_simple = list("beep", "boop", "ping")
-	squeak_override = list('sound/machines/beep.ogg' = 1)
-
-/obj/item/toy/plush/skyrat/scrubpuppy
-	name = "scrub-puppy plushie"
-	desc = "An adorable stuffed toy of a Scrubpuppy, the hard-working pup who keeps the station clean!"
-	icon_state = "plushie_scrubpuppy"
-	attack_verb_continuous = list("beeps", "boops", "pings")
-	attack_verb_simple = list("beep", "boop", "ping")
-	squeak_override = list('sound/machines/beep.ogg' = 1)
-
-/obj/item/toy/plush/skyrat/meddrake
-	name = "medi-drake plushie"
-	desc = "An adorable stuffed toy of a Medidrake."
-	icon_state = "plushie_meddrake"
-	attack_verb_continuous = list("beeps", "boops", "pings")
-	attack_verb_simple = list("beep", "boop", "ping")
-	squeak_override = list('sound/machines/beep.ogg' = 1)
-
-/obj/item/toy/plush/skyrat/secdrake
-	name = "sec-drake plushie"
-	desc = "An adorable stuffed toy of a Secdrake."
-	icon_state = "plushie_secdrake"
-	attack_verb_continuous = list("beeps", "boops", "pings")
-	attack_verb_simple = list("beep", "boop", "ping")
-	squeak_override = list('sound/machines/beep.ogg' = 1)
-
 /obj/item/toy/plush/skyrat/fox
 	name = "fox plushie"
 	desc = "An adorable stuffed toy of a Fox."

@@ -48,8 +48,6 @@
 		/obj/item/mop/cyborg, // Soap's good and all, but a mop is good, too
 		/obj/item/lightreplacer, // Lights go out sometimes, or get broken, let the Borg help fix them
 		/obj/item/borg/cyborghug,
-		/obj/item/dogborg_nose,
-		/obj/item/dogborg_tongue,
 		/obj/item/reagent_containers/borghypo, // Let Roleplay Borgs heal visitors
 		/obj/item/borg_shapeshifter/stable)
 	hat_offset = -3

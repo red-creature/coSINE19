@@ -66,30 +66,6 @@ GLOBAL_LIST_INIT(loadout_toys, generate_loadout_items(/datum/loadout_item/toys))
 	name = "Strange Goat Plushie"
 	item_path = /obj/item/toy/plush/goatplushie
 
-/datum/loadout_item/toys/sechound
-	name = "Sechound Plushie"
-	item_path = /obj/item/toy/plush/skyrat/sechound
-
-/datum/loadout_item/toys/medihound
-	name = "Medihound Plushie"
-	item_path = /obj/item/toy/plush/skyrat/medihound
-
-/datum/loadout_item/toys/engihound
-	name = "Engihound Plushie"
-	item_path = /obj/item/toy/plush/skyrat/engihound
-
-/datum/loadout_item/toys/scrubpuppy
-	name = "Scrubpuppy Plushie"
-	item_path = /obj/item/toy/plush/skyrat/scrubpuppy
-
-/datum/loadout_item/toys/meddrake
-	name = "MediDrake Plushie"
-	item_path = /obj/item/toy/plush/skyrat/meddrake
-
-/datum/loadout_item/toys/secdrake
-	name = "SecDrake Plushie"
-	item_path = /obj/item/toy/plush/skyrat/secdrake
-
 /datum/loadout_item/toys/borbplushie
 	name = "Borb Plushie"
 	item_path = /obj/item/toy/plush/skyrat/borbplushie
