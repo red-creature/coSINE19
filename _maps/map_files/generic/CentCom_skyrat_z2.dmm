@@ -4942,7 +4942,6 @@
 /turf/open/floor/iron/white,
 /area/centcom/interlink)
 "bRc" = (
-/obj/machinery/vending/dorms,
 /turf/open/floor/iron/white,
 /area/centcom/interlink)
 "bST" = (
@@ -5930,7 +5929,6 @@
 /turf/open/floor/iron/dark,
 /area/centcom/interlink)
 "egW" = (
-/obj/machinery/vending/dorms,
 /obj/effect/turf_decal/bot,
 /turf/open/floor/iron/dark,
 /area/centcom/interlink)
@@ -6011,7 +6009,6 @@
 /turf/open/floor/wood/tile,
 /area/centcom/interlink)
 "erP" = (
-/obj/machinery/vending/dorms,
 /turf/open/floor/iron/showroomfloor,
 /area/centcom/holding/cafe)
 "esx" = (
@@ -10139,10 +10136,6 @@
 	pixel_x = -19;
 	pixel_y = -23
 	},
-/obj/item/fancy_pillow{
-	pixel_x = -10;
-	pixel_y = -7
-	},
 /turf/open/floor/bamboo,
 /area/centcom/holding/cafedorms)
 "plJ" = (
@@ -10187,7 +10180,6 @@
 /area/centcom/holding/cafedorms)
 "pry" = (
 /obj/structure/closet/secure_closet/personal/cabinet,
-/obj/item/condom_pack,
 /obj/effect/turf_decal/siding/wood/corner{
 	dir = 1
 	},
@@ -11204,7 +11196,6 @@
 /area/centcom/interlink)
 "rHY" = (
 /obj/structure/closet/secure_closet/personal/cabinet,
-/obj/item/condom_pack,
 /turf/open/floor/wood,
 /area/centcom/interlink)
 "rJC" = (
@@ -12568,13 +12559,6 @@
 	pixel_x = -12;
 	pixel_y = -45
 	},
-/obj/item/fancy_pillow{
-	pixel_x = -22;
-	pixel_y = -7
-	},
-/obj/item/fancy_pillow{
-	pixel_y = -1
-	},
 /turf/open/floor/bamboo,
 /area/centcom/holding/cafedorms)
 "uIh" = (
@@ -13501,7 +13485,6 @@
 /turf/open/floor/iron,
 /area/centcom/interlink)
 "xqI" = (
-/obj/machinery/vending/dorms,
 /turf/open/indestructible/hotelwood,
 /area/centcom/holding/cafe)
 "xsg" = (

@@ -482,13 +482,6 @@
 	//SKYRAT EDIT ADDITION END
 
 	//SKYRAT EDIT ADDITION BEGIN - CUSTOMIZATION
-	for(var/genital in possible_genitals)
-		if(dna.species.mutant_bodyparts[genital])
-			var/datum/sprite_accessory/genital/G = GLOB.sprite_accessories[genital][dna.species.mutant_bodyparts[genital][MUTANT_INDEX_NAME]]
-			if(G)
-				if(!(G.is_hidden(src)))
-					. += "<span class='notice'>[t_He] has exposed genitals... <a href='?src=[REF(src)];lookup_info=genitals'>Look closer...</a></span>"
-					break
 
 	var/flavor_text_link
 	/// The first 1-FLAVOR_PREVIEW_LIMIT characters in the mob's "flavor_text" DNA feature. FLAVOR_PREVIEW_LIMIT is defined in flavor_defines.dm.
@@ -502,11 +495,6 @@
 		flavor_text_link = span_notice("<a href='?src=[REF(src)];lookup_info=open_examine_panel'>Examine closely...</a>")
 	if (flavor_text_link)
 		. += flavor_text_link
-
-	if(client)
-		var/erp_status_pref = client.prefs.read_preference(/datum/preference/choiced/erp_status)
-		if(erp_status_pref && erp_status_pref != "disabled")
-			. += span_notice("ERP STATUS: [erp_status_pref]")
 
 	//Temporary flavor text addition:
 	if(temporary_flavor_text)

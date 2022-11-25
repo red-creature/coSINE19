@@ -437,7 +437,6 @@
 /turf/open/floor/carpet/neon/simple/teal/nodots,
 /area/ruin/space/has_grav/hotel/guestroom/room_3)
 "cP" = (
-/obj/machinery/vending/dorms,
 /obj/effect/turf_decal/siding/dark,
 /turf/open/floor/carpet/black,
 /area/ruin/space/has_grav/hotel)
@@ -3989,19 +3988,8 @@
 /obj/item/tickle_feather,
 /obj/item/kinky_shocker,
 /obj/item/storage/medkit/regular,
-/obj/item/clothing/sextoy/buttplug{
-	pixel_y = 4
-	},
-/obj/item/clothing/sextoy/dildo{
-	pixel_x = -6;
-	pixel_y = 7
-	},
 /obj/item/spanking_pad,
 /obj/item/clothing/mask/leatherwhip,
-/obj/item/condom_pack,
-/obj/item/condom_pack,
-/obj/item/condom_pack,
-/obj/item/condom_pack,
 /obj/item/electropack/shockcollar,
 /obj/item/storage/box/strippole_kit,
 /obj/item/wrench,
