@@ -511,8 +511,6 @@
 	// Executed when a gamer has lost
 	var/mob/living/carbon/human/human_holder = quirk_holder
 	human_holder.add_mood_event("gamer_lost", /datum/mood_event/gamer_lost)
-	// Executed asynchronously due to say()
-	INVOKE_ASYNC(src, PROC_REF(gamer_moment))
 /**
  * Gamer is playing a game
  *
@@ -529,12 +527,6 @@
 	if (gaming_withdrawal_timer)
 		deltimer(gaming_withdrawal_timer)
 	gaming_withdrawal_timer = addtimer(CALLBACK(src, PROC_REF(enter_withdrawal)), GAMING_WITHDRAWAL_TIME, TIMER_STOPPABLE)
-
-
-/datum/quirk/gamer/proc/gamer_moment()
-	// It was a heated gamer moment...
-	var/mob/living/carbon/human/human_holder = quirk_holder
-	human_holder.say(";[pick("SHIT", "PISS", "FUCK", "CUNT", "COCKSUCKER", "MOTHERFUCKER")]!!", forced = name)
 
 /datum/quirk/gamer/proc/enter_withdrawal()
 	var/mob/living/carbon/human/human_holder = quirk_holder
