@@ -748,12 +748,6 @@
 		visible_message(span_danger("[src] manages to [cuff_break ? "break" : "remove"] [I]!"))
 		to_chat(src, span_notice("You successfully [cuff_break ? "break" : "remove"] [I]."))
 		return TRUE
-	//SKYRAT ERP UPDATE ADDITION: NOW GLOVES CAN RESTRAIN PLAYERS
-	if(I == gloves)
-		visible_message(span_danger("[src] manages to [cuff_break ? "break" : "remove"] [I]!"))
-		to_chat(src, span_notice("You successfully [cuff_break ? "break" : "remove"] [I]."))
-		return TRUE
-	//SKYRAT ERP UPDATE ADDITION END
 
 /mob/living/carbon/human/replace_records_name(oldname,newname) // Only humans have records right now, move this up if changed.
 	for(var/list/L in list(GLOB.data_core.general,GLOB.data_core.medical,GLOB.data_core.security,GLOB.data_core.locked))
@@ -885,11 +879,6 @@
 
 			if(initial(quirk_type.abstract_parent_type) == type)
 				continue
-
-			// SKYRAT EDIT ADDITION START
-			if(initial(quirk_type.erp_quirk) && CONFIG_GET(flag/disable_erp_preferences))
-				continue
-			// SKYRAT EDIT ADDITION END
 
 			var/qname = initial(quirk_type.name)
 			options[has_quirk(quirk_type) ? "[qname] (Remove)" : "[qname] (Add)"] = quirk_type

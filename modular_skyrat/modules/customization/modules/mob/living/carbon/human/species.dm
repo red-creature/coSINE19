@@ -3,8 +3,6 @@ GLOBAL_LIST_EMPTY(customizable_races)
 /datum/species
 	mutant_bodyparts = list()
 	digitigrade_customization = DIGITIGRADE_OPTIONAL // Doing this so that the legs preference actually works for everyone.
-	///Self explanatory
-	var/can_have_genitals = TRUE
 	///A list of actual body markings on the owner of the species. Associative lists with keys named by limbs defines, pointing to a list with names and colors for the marking to be rendered. This is also stored in the DNA
 	var/list/list/body_markings = list()
 	///Override of the eyes icon file, used for Vox and maybe more in the future - The future is now, with Teshari using it too
@@ -260,13 +258,6 @@ GLOBAL_LIST_EMPTY(customizable_races)
 /datum/species
 	///What accessories can a species have aswell as their default accessory of such type e.g. "frills" = "Aquatic". Default accessory colors is dictated by the accessory properties and mutcolors of the specie
 	var/list/default_mutant_bodyparts = list()
-	var/list/genitals_list = list(ORGAN_SLOT_VAGINA, ORGAN_SLOT_WOMB, ORGAN_SLOT_TESTICLES, ORGAN_SLOT_BREASTS, ORGAN_SLOT_ANUS, ORGAN_SLOT_PENIS)
-
-/datum/species/New()
-	. = ..()
-	if(can_have_genitals)
-		for(var/genital in genitals_list)
-			default_mutant_bodyparts[genital] = "None"
 
 /datum/species/dullahan
 	mutant_bodyparts = list()
@@ -287,12 +278,10 @@ GLOBAL_LIST_EMPTY(customizable_races)
 
 /datum/species/plasmaman
 	mutant_bodyparts = list()
-	can_have_genitals = FALSE
 	can_augment = FALSE
 
 /datum/species/ethereal
 	mutant_bodyparts = list()
-	can_have_genitals = FALSE
 	can_augment = FALSE
 
 /datum/species/pod
@@ -307,9 +296,6 @@ GLOBAL_LIST_EMPTY(customizable_races)
 /datum/species/proc/get_random_mutant_bodyparts(list/features) //Needs features to base the colour off of
 	var/list/mutantpart_list = list()
 	var/list/bodyparts_to_add = default_mutant_bodyparts.Copy()
-	if(CONFIG_GET(flag/disable_erp_preferences))
-		for(var/genital in genitals_list)
-			bodyparts_to_add.Remove(genital)
 	for(var/key in bodyparts_to_add)
 		var/datum/sprite_accessory/SP
 		if(bodyparts_to_add[key] == ACC_RANDOM)

@@ -29,7 +29,6 @@
 		/datum/crafting_bench_recipe/plate_boots,
 		/datum/crafting_bench_recipe/horse_shoes,
 		/datum/crafting_bench_recipe/ring,
-		/datum/crafting_bench_recipe/collar,
 		/datum/crafting_bench_recipe/handcuffs,
 		/datum/crafting_bench_recipe/borer_cage,
 		/datum/crafting_bench_recipe/pavise,
