@@ -16,15 +16,6 @@
 	construction_time = 80
 	category = list(RND_CATEGORY_MECHFAB_CYBORG_MODULES + RND_SUBCATEGORY_MECHFAB_CYBORG_MODULES_MEDICAL)
 
-/datum/design/affection_module
-	name = "Cyborg Upgrade (Affection Module)"
-	id = "affection_module"
-	build_type = MECHFAB
-	build_path = /obj/item/borg/upgrade/affectionmodule
-	materials = list(/datum/material/iron=1000, /datum/material/glass=500)
-	construction_time = 40
-	category = list(RND_CATEGORY_MECHFAB_CYBORG_MODULES + RND_SUBCATEGORY_MECHFAB_CYBORG_MODULES_ALL)
-
 /datum/design/advanced_materials
 	name = "Cyborg Upgrade (Advanced Materials)"
 	id = "advanced_materials"

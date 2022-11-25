@@ -193,11 +193,6 @@
 	cyborg.set_modularInterface_theme()
 	log_silicon("CYBORG: [key_name(cyborg)] has transformed into the [new_model] model.")
 
-	//SKYRAT EDIT ADDITION BEGIN - ALTBORGS - Old check for 'dogborg' var no longer necessary, refactored into model_features instead.
-	new_model.update_dogborg()
-	new_model.update_tallborg()
-	//SKYRAT EDIT ADDITION END
-
 	INVOKE_ASYNC(new_model, PROC_REF(do_transform_animation))
 	qdel(src)
 	return new_model
@@ -209,21 +204,10 @@
 		for(var/skin in borg_skins)
 			var/list/details = borg_skins[skin]
 			reskin_icons[skin] = image(icon = details[SKIN_ICON] || 'icons/mob/silicon/robots.dmi', icon_state = details[SKIN_ICON_STATE])
-			//SKYRAT EDIT ADDITION BEGIN - ALTBORGS
-			if (!isnull(details[SKIN_FEATURES]))
-				if (R_TRAIT_WIDE in details[SKIN_FEATURES])
-					var/image/reskin = reskin_icons[skin]
-					reskin.pixel_x -= 16
-			//SKYRAT EDIT END
 		var/borg_skin = show_radial_menu(cyborg, cyborg, reskin_icons, custom_check = CALLBACK(src, PROC_REF(check_menu), cyborg, old_model), radius = 38, require_near = TRUE)
 		if(!borg_skin)
 			return FALSE
 		var/list/details = borg_skins[borg_skin]
-		//SKYRAT EDIT START
-		if(cyborg.hasExpanded && (((R_TRAIT_WIDE in details[SKIN_FEATURES]) && (R_TRAIT_WIDE in model_features)) || ((R_TRAIT_TALL in details[SKIN_FEATURES]) && (R_TRAIT_TALL in model_features))))
-			to_chat(cyborg, span_warning("You can't make yourself into a larger frame when you've already used an expander!"))
-			return FALSE
-		//SKYRAT EDIT END
 		if(!isnull(details[SKIN_ICON_STATE]))
 			cyborg_base_icon = details[SKIN_ICON_STATE]
 		if(!isnull(details[SKIN_ICON]))
