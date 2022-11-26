@@ -10136,7 +10136,6 @@
 	id = "kitchen_counter";
 	name = "Kitchen Counter Shutters"
 	},
-/obj/item/holosign_creator/robot_seat/restaurant,
 /turf/open/floor/iron/cafeteria{
 	dir = 5
 	},
@@ -13568,7 +13567,6 @@
 /obj/effect/turf_decal/siding/wood{
 	dir = 8
 	},
-/obj/machinery/restaurant_portal/bar,
 /turf/open/floor/wood,
 /area/station/commons/lounge)
 "eZz" = (
@@ -25670,7 +25668,6 @@
 	dir = 1
 	},
 /obj/structure/table/reinforced,
-/obj/item/holosign_creator/robot_seat/bar,
 /turf/open/floor/iron,
 /area/station/service/bar)
 "jjL" = (
@@ -26134,7 +26131,6 @@
 /area/station/science/cytology)
 "jsn" = (
 /obj/machinery/light/directional/north,
-/obj/machinery/restaurant_portal/restaurant,
 /turf/open/floor/wood,
 /area/station/commons/lounge)
 "jso" = (
@@ -60034,7 +60030,6 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/mob/living/carbon/human/species/monkey/punpun,
 /turf/open/floor/iron,
 /area/station/service/bar)
 "vfv" = (

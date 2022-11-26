@@ -2978,9 +2978,6 @@
 /area/station/ai_monitored/turret_protected/aisat_interior)
 "aHv" = (
 /obj/structure/rack,
-/obj/item/holosign_creator/robot_seat/restaurant{
-	pixel_y = -5
-	},
 /obj/effect/turf_decal/bot,
 /obj/item/toy/figure/chef,
 /turf/open/floor/iron/dark,
@@ -41387,7 +41384,6 @@
 	pixel_x = -4;
 	pixel_y = 7
 	},
-/obj/item/holosign_creator/robot_seat/bar,
 /obj/machinery/door/firedoor,
 /turf/open/floor/iron/dark/smooth_half{
 	dir = 1
@@ -53254,7 +53250,6 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/landmark/event_spawn,
-/mob/living/carbon/human/species/monkey/punpun,
 /turf/open/floor/carpet/green,
 /area/station/commons/lounge)
 "mSD" = (
@@ -68324,8 +68319,6 @@
 	dir = 1
 	},
 /obj/effect/turf_decal/tile/yellow,
-/obj/machinery/restaurant_portal/bar,
-/obj/effect/turf_decal/delivery/red,
 /obj/machinery/light_switch/directional/south{
 	pixel_x = 8
 	},
@@ -85766,7 +85759,6 @@
 /turf/closed/wall,
 /area/station/maintenance/space_hut/observatory)
 "uVa" = (
-/obj/machinery/restaurant_portal/restaurant,
 /obj/effect/turf_decal/delivery/red,
 /obj/machinery/light/directional/west,
 /obj/item/radio/intercom/directional/west,
