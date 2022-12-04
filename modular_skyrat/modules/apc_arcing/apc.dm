@@ -1,4 +1,4 @@
-/obj/machinery/power/apc
+/*/obj/machinery/power/apc
 	/// Has the APC been protected against arcing?
 	var/arc_shielded = FALSE
 
@@ -50,5 +50,5 @@
 	. = ..()
 	if(panel_open && arc_shielded)
 		balloon_alert(user, "arc shielding removed")
-		arc_shielded = FALSE
-		tool.play_tool_sound(src, 50)
+		arc_shielded = FALSE 
+		tool.play_tool_sound(src, 50) */
