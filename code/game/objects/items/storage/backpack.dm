@@ -335,13 +335,8 @@
 	qdel(C)
 	*/
 	var/contraband_list = list(
-		/obj/item/storage/bag/ammo = 4,
-		/obj/item/storage/belt/utility/syndicate = 1,
-		/obj/item/storage/toolbox/syndicate = 7,
-		/obj/item/card/id/advanced/chameleon = 6,
-		/obj/item/stack/spacecash/c5000 = 3,
-		/obj/item/stack/telecrystal = 2,
-		/obj/item/storage/belt/military = 12,
+		/obj/item/storage/bag/ammo = 3,
+		/obj/item/stack/spacecash/c1000 = 3,
 		/obj/item/storage/pill_bottle/aranesp = 11,
 		/obj/item/storage/pill_bottle/happy = 12,
 		/obj/item/storage/pill_bottle/stimulant = 9,
@@ -354,10 +349,10 @@
 		/obj/item/food/grown/cannabis = 13,
 		/obj/item/food/grown/cannabis/rainbow = 8,
 		/obj/item/food/grown/mushroom/libertycap = 11,
-		/obj/item/clothing/mask/gas/syndicate = 10,
-		/obj/item/vending_refill/donksoft = 13,
-		/obj/item/ammo_box/foambox/riot = 11,
 		/obj/item/soap/syndie = 7,
+		/obj/item/crowbar/red = 12,
+		/obj/item/food/drug/moon_rock = 6,
+		/obj/item/laser_pointer = 3,
 	)
 	for(var/i in 1 to 3)
 		var/contraband_type = pick_weight(contraband_list)
