@@ -55,3 +55,6 @@ map voidraptor
 	maxplayers 100
 	votable
 endmap
+
+map cosine19
+endmap
