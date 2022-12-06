@@ -1,0 +1,52 @@
+{
+	"version": 1,
+	"map_name": "Commastation",
+	"map_path": "map_files/Commastation",
+	"map_file": "commastation.dmm",
+	"space_ruin_levels": 0,
+	"space_empty_levels": 0,
+	"shuttles": {
+		"cargo": "cargo_skyrat",
+		"ferry": "ferry_fancy",
+		"whiteship": "whiteship_box",
+		"emergency": "emergency_box"
+	},
+	"traits": [
+		{
+			"Up": 1,
+			"Linkage": null,
+			"Gravity": true,
+			"Baseturf": "/turf/mineral/ash_rock",
+		},
+		{
+			"Down": -1,
+			"Up": 1,
+			"Linkage": null,
+			"Baseturf": "/turf/mineral/ash_rock",
+		},
+		{
+			"Down": -1,
+			"Mining": true,
+			"Linkage": null,
+			"Gravity": true,
+			"Baseturf": "/turf/mineral/ash_rock",
+		},
+		{
+			"Down": -1,
+			"Mining": true,
+			"Linkage": null,
+			"Gravity": true,
+			"Baseturf": "/turf/mineral/ash_rock",
+		}
+	],
+	"minetype": "none",
+	"blacklist_file": "iceruinblacklist.txt",
+	"job_changes": {
+		"Cook": {
+			"additional_cqc_areas": ["/area/station/service/kitchen/diner"]
+		},
+		"Captain": {
+			"special_charter": "moon"
+		}
+	}
+}

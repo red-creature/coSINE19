@@ -14,7 +14,6 @@ Format:
 endmap
 
 map metastation
-	#default
 	minplayers 25
 	#voteweight 0.5
 	votable
@@ -44,6 +43,10 @@ endmap
 map multiz_debug
 endmap
 
+map commastation
+	votable
+endmap
+
 ##SKYRAT MAPS##
 
 map blueshift
@@ -56,5 +59,3 @@ map voidraptor
 	votable
 endmap
 
-map cosine19
-endmap
