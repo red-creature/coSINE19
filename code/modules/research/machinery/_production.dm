@@ -28,9 +28,6 @@
 	/// What color is this machine's stripe? Leave null to not have a stripe.
 	var/stripe_color = null
 
-	/// Does this charge the user's ID on fabrication?
-	var/charges_tax = TRUE
-
 /obj/machinery/rnd/production/Initialize(mapload)
 	. = ..()
 
