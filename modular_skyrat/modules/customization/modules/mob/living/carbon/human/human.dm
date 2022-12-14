@@ -1,30 +1,9 @@
-/mob/living/carbon/human
-	var/static/list/possible_genitals = list(ORGAN_SLOT_PENIS, ORGAN_SLOT_TESTICLES, ORGAN_SLOT_VAGINA, ORGAN_SLOT_BREASTS, ORGAN_SLOT_ANUS)
-
 /mob/living/carbon/human/Topic(href, href_list)
 	. = ..()
 
-	if(href_list["lookup_info"])
-		switch(href_list["lookup_info"])
-			if("genitals")
-				var/list/line = list()
-				for(var/genital in possible_genitals)
-					if(!dna.species.mutant_bodyparts[genital])
-						continue
-					var/datum/sprite_accessory/genital/G = GLOB.sprite_accessories[genital][dna.species.mutant_bodyparts[genital][MUTANT_INDEX_NAME]]
-					if(!G)
-						continue
-					if(G.is_hidden(src))
-						continue
-					var/obj/item/organ/external/genital/ORG = getorganslot(G.associated_organ_slot)
-					if(!ORG)
-						continue
-					line += ORG.get_description_string(G)
-				if(length(line))
-					to_chat(usr, span_notice("[jointext(line, "\n")]"))
-			if("open_examine_panel")
-				tgui.holder = src
-				tgui.ui_interact(usr) //datum has a tgui component, here we open the window
+	if(href_list["lookup_info"] == "open_examine_panel")
+		tgui.holder = src
+		tgui.ui_interact(usr) //datum has a tgui component, here we open the window
 
 /mob/living/carbon/human/species/synthliz
 	race = /datum/species/robotic/synthliz
@@ -55,36 +34,6 @@
 
 /mob/living/carbon/human/species/teshari
 	race = /datum/species/teshari
-
-/mob/living/carbon/human/verb/toggle_undies()
-	set category = "IC"
-	set name = "Toggle underwear visibility"
-	set desc = "Allows you to toggle which underwear should show or be hidden. Underwear will obscure genitals."
-
-	if(stat != CONSCIOUS)
-		to_chat(usr, span_warning("You can't toggle underwear visibility right now..."))
-		return
-
-	var/underwear_button = underwear_visibility & UNDERWEAR_HIDE_UNDIES ? "Show underwear" : "Hide underwear"
-	var/undershirt_button = underwear_visibility & UNDERWEAR_HIDE_SHIRT ? "Show shirt" : "Hide shirt"
-	var/socks_button = underwear_visibility & UNDERWEAR_HIDE_SOCKS ? "Show socks" : "Hide socks"
-	var/list/choice_list = list("[underwear_button]" = 1,"[undershirt_button]" = 2,"[socks_button]" = 3,"Show all" = 4, "Hide all" = 5)
-	var/picked_visibility = input(src, "Choose visibility setting", "Show/Hide underwear") as null|anything in choice_list
-	if(picked_visibility)
-		var/picked_choice = choice_list[picked_visibility]
-		switch(picked_choice)
-			if(1)
-				underwear_visibility ^= UNDERWEAR_HIDE_UNDIES
-			if(2)
-				underwear_visibility ^= UNDERWEAR_HIDE_SHIRT
-			if(3)
-				underwear_visibility ^= UNDERWEAR_HIDE_SOCKS
-			if(4)
-				underwear_visibility = NONE
-			if(5)
-				underwear_visibility = UNDERWEAR_HIDE_UNDIES | UNDERWEAR_HIDE_SHIRT | UNDERWEAR_HIDE_SOCKS
-		update_body()
-	return
 
 /mob/living/carbon/human/revive(full_heal = FALSE, admin_revive = FALSE)
 	. = ..()

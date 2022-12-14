@@ -97,8 +97,6 @@
 #define HIDETAIL (1<<15)
 /// Does this sprite also hide the spine on tails? Realistically only useful for the clothes that have a special tail overlay, like MODsuits
 #define HIDESPINE (1<<16)
-/// Does this sprite hide devious devices?
-#define HIDESEXTOY (1<<17)
 //SKYRAT EDIT ADDITION END
 
 //bitflags for clothing coverage - also used for limbs

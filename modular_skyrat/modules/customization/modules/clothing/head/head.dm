@@ -254,7 +254,7 @@
 
 /obj/item/clothing/head/soft/yankee/rimless
 	name = "rimless fashionable baseball cap"
-	desc = "Rimless for her pleasure."
+	desc = "Rimless yet still fashionable."
 	icon = 'modular_skyrat/master_files/icons/obj/clothing/hats.dmi'
 	worn_icon = 'modular_skyrat/master_files/icons/mob/clothing/head.dmi'
 	icon_state = "yankeenobrimsoft"

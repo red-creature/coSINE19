@@ -24,52 +24,16 @@ GLOBAL_LIST_EMPTY_TYPED(interaction_instances, /datum/interaction)
 	var/sound_range = 1
 	/// Stores the sound for later.
 	var/sound_cache = null
-	/// Is this lewd?
-	var/lewd = FALSE
-	/// What parts do WE need(IMPORTANT TO GET IT TO THE CORRECT DEFINE, ORGAN SLOT)?
-	var/list/user_required_parts = list()
-	/// What parts do they need(IMPORTANT TO GET IT TO THE CORRECT DEFINE, ORGAN SLOT)?
-	var/list/target_required_parts = list()
-	/// The amount of pleasure the target recieves from this interaciton.
-	var/target_pleasure = 0
-	/// The amount of arousal the target recieves from this interaction.
-	var/target_arousal = 0
-	/// The amount of pain the target recieves.
-	var/target_pain = 0
-	/// The amount of pleasure the user recieves.
-	var/user_pleasure = 0
-	/// The amount of arousal the user recieves.
-	var/user_arousal = 0
-	/// The amount of pain the user recieves.
-	var/user_pain = 0
 	/// A list of possible sounds.
 	var/list/sound_possible = list()
 	/// What requirements does this interaction have? See defines.
 	var/list/interaction_requires = list()
 	/// What color should the interaction button be?
 	var/color = "blue"
-	/// What sexuality preference do we display for.
-	var/sexuality = ""
 
 /datum/interaction/proc/allow_act(mob/living/carbon/human/user, mob/living/carbon/human/target)
 	if(target == user && usage == INTERACTION_OTHER)
 		return FALSE
-
-	if(user_required_parts.len)
-		for(var/thing in user_required_parts)
-			var/obj/item/organ/external/genital/required_part = user.getorganslot(thing)
-			if(isnull(required_part))
-				return FALSE
-			if(!required_part.is_exposed())
-				return FALSE
-
-	if(target_required_parts.len)
-		for(var/thing in target_required_parts)
-			var/obj/item/organ/external/genital/required_part = target.getorganslot(thing)
-			if(isnull(required_part))
-				return FALSE
-			if(!required_part.is_exposed())
-				return FALSE
 
 	for(var/requirement in interaction_requires)
 		switch(requirement)
@@ -95,10 +59,7 @@ GLOBAL_LIST_EMPTY_TYPED(interaction_instances, /datum/interaction)
 	var/msg = pick(message)
 	// We replace %USER% with nothing because manual_emote already prepends it.
 	msg = trim(replacetext(replacetext(msg, "%TARGET%", "[target]"), "%USER%", ""), INTERACTION_MAX_CHAR)
-	if(lewd)
-		user.emote("subtler", null, msg, TRUE)
-	else
-		user.manual_emote(msg)
+	user.manual_emote(msg)
 	if(user_messages.len)
 		var/user_msg = pick(user_messages)
 		user_msg = replacetext(replacetext(user_msg, "%TARGET%", "[target]"), "%USER%", "[user]")
@@ -117,14 +78,6 @@ GLOBAL_LIST_EMPTY_TYPED(interaction_instances, /datum/interaction)
 		sound_cache = pick(sound_possible)
 		for(var/mob/mob in view(sound_range, user))
 			SEND_SOUND(sound_cache, mob)
-
-	if(lewd)
-		user.adjust_pleasure(user_pleasure)
-		user.adjust_arousal(user_arousal)
-		user.adjust_pain(user_pain)
-		target.adjust_pleasure(target_pleasure)
-		target.adjust_arousal(target_arousal)
-		target.adjust_pain(target_pain)
 
 /datum/interaction/proc/load_from_json(path)
 	var/fpath = path
@@ -147,17 +100,7 @@ GLOBAL_LIST_EMPTY_TYPED(interaction_instances, /datum/interaction)
 	color = sanitize_text(json["color"])
 
 	user_messages = sanitize_islist(json["user_messages"], list())
-	user_required_parts = sanitize_islist(json["user_required_parts"], list())
-	user_arousal = sanitize_integer(json["user_arousal"], 0, 100, 0)
-	user_pleasure = sanitize_integer(json["user_pleasure"], 0, 100, 0)
-	user_pain = sanitize_integer(json["user_pain"], 0, 100, 0)
 	target_messages = sanitize_islist(json["target_messages"], list())
-	target_required_parts = sanitize_islist(json["target_required_parts"], list())
-	target_arousal = sanitize_integer(json["target_arousal"], 0, 100, 0)
-	target_pleasure = sanitize_integer(json["target_pleasure"], 0, 100, 0)
-	target_pain = sanitize_integer(json["target_pain"], 0, 100, 0)
-	lewd = sanitize_integer(json["lewd"], 0, 1, 0)
-	sexuality = sanitize_text(json["sexuality"])
 	return TRUE
 
 /datum/interaction/proc/json_save(path)
@@ -177,17 +120,7 @@ GLOBAL_LIST_EMPTY_TYPED(interaction_instances, /datum/interaction)
 		"interaction_requires" = interaction_requires,
 		"color" = color,
 		"user_messages" = user_messages,
-		"user_required_parts" = user_required_parts,
-		"user_arousal" = user_arousal,
-		"user_pleasure" = user_pleasure,
-		"user_pain" = user_pain,
 		"target_messages" = target_messages,
-		"target_required_parts" = target_required_parts,
-		"target_arousal" = target_arousal,
-		"target_pleasure" = target_pleasure,
-		"target_pain" = target_pain,
-		"lewd" = lewd,
-		"sexuality" = sexuality,
 	)
 	var/file = file(fpath)
 	WRITE_FILE(file, json_encode(json))
@@ -247,17 +180,7 @@ GLOBAL_LIST_EMPTY_TYPED(interaction_instances, /datum/interaction)
 		interaction.color = sanitize_text(ijson["color"])
 
 		interaction.user_messages = sanitize_islist(ijson["user_messages"], list())
-		interaction.user_required_parts = sanitize_islist(ijson["user_required_parts"], list())
-		interaction.user_arousal = sanitize_integer(ijson["user_arousal"], 0, 100, 0)
-		interaction.user_pleasure = sanitize_integer(ijson["user_pleasure"], 0, 100, 0)
-		interaction.user_pain = sanitize_integer(ijson["user_pain"], 0, 100, 0)
 		interaction.target_messages = sanitize_islist(ijson["target_messages"], list())
-		interaction.target_required_parts = sanitize_islist(ijson["target_required_parts"], list())
-		interaction.target_arousal = sanitize_integer(ijson["target_arousal"], 0, 100, 0)
-		interaction.target_pleasure = sanitize_integer(ijson["target_pleasure"], 0, 100, 0)
-		interaction.target_pain = sanitize_integer(ijson["target_pain"], 0, 100, 0)
-		interaction.lewd = sanitize_integer(ijson["lewd"], 0, 1, 0)
-		interaction.sexuality = sanitize_text(ijson["sexuality"])
 
 		GLOB.interaction_instances[iname] = interaction
 
