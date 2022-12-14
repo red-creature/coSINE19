@@ -70,13 +70,6 @@
 	"ethcolor" = "#FFCCCC",\
 	"skin_color" = "#FFEEDD",\
 	"flavor_text" = "",\
-	"breasts_size" = 1,\
-	"breasts_lactation" = FALSE,\
-	"penis_size" = 13,\
-	"penis_girth" = 9,\
-	"penis_taur_mode" = TRUE,\
-	"penis_sheath" = SHEATH_NONE,\
-	"balls_size" = 1,\
 	"body_size" = BODY_SIZE_NORMAL,\
 	"custom_species" = null,\
 	"penis_uses_skintones" = TRUE,\
