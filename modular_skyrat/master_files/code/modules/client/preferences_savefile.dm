@@ -22,8 +22,6 @@
 /// Loads the modular customizations of a character from the savefile
 /datum/preferences/proc/load_character_skyrat(savefile/save)
 
-	var/needs_update = savefile_needs_update_skyrat(save)
-
 	READ_FILE(save["loadout_list"], loadout_list)
 
 	READ_FILE(save["augments"] , augments)
@@ -79,43 +77,6 @@
 		addtimer(CALLBACK(src, PROC_REF(check_migration)), 10 SECONDS)
 
 	READ_FILE(save["headshot"], headshot)
-
-	if(needs_update >= 0)
-		update_character_skyrat(needs_update, save) // needs_update == savefile_version if we need an update (positive integer)
-
-/// Brings a savefile up to date with modular preferences. Called if savefile_needs_update_skyrat() returned a value higher than 0
-/datum/preferences/proc/update_character_skyrat(current_version, savefile/save)
-
-	if(current_version < 1)
-		// removed genital toggles, with the new choiced prefs paths as assoc
-		var/static/list/old_toggles
-		if(!old_toggles)
-			old_toggles = list("penis_toggle" = /datum/preference/choiced/genital/penis,
-				"testicles_toggle" = /datum/preference/choiced/genital/testicles,
-				"vagina_toggle" = /datum/preference/choiced/genital/vagina,
-				"womb_toggle" = /datum/preference/choiced/genital/womb,
-				"breasts_toggle" = /datum/preference/choiced/genital/breasts,
-				"anus_toggle" = /datum/preference/choiced/genital/anus,
-			)
-		for(var/toggle in old_toggles)
-			var/has_genital
-			READ_FILE(save[toggle], has_genital)
-			if(!has_genital) // The toggle was off, so we make sure they have it set to the default "None" in the dropdown pref.
-				var/datum/preference/genital = GLOB.preference_entries[old_toggles[toggle]]
-				write_preference(genital, genital.create_default_value())
-
-		var/uses_skintone
-		READ_FILE(save["skin_tone_toggle"], uses_skintone)
-		if(uses_skintone)
-			for(var/pref_type in subtypesof(/datum/preference/toggle/genital_skin_tone))
-				write_preference(GLOB.preference_entries[pref_type], TRUE)
-
-	if(current_version < 2)
-		var/list/old_breast_prefs
-		READ_FILE(save["breasts_size"], old_breast_prefs)
-		if(isnum(old_breast_prefs)) // Can't be too careful
-			// You weren't meant to be able to pick sizes over this anyways.
-			write_preference(GLOB.preference_entries[/datum/preference/choiced/breasts_size], GLOB.breast_size_translation["[min(old_breast_prefs, 10)]"])
 
 /datum/preferences/proc/check_migration()
 	if(!tgui_prefs_migration)

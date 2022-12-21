@@ -1,4 +1,4 @@
-import { FeatureChoiced, FeatureDropdownInput, Feature, FeatureColorInput, FeatureTextInput, FeatureShortTextInput, CheckboxInput, FeatureTriColorInput, FeatureTriBoolInput, FeatureToggle } from '../../base';
+import { FeatureChoiced, FeatureDropdownInput, Feature, FeatureColorInput, FeatureTextInput, FeatureShortTextInput, CheckboxInput, FeatureTriColorInput, FeatureTriBoolInput, FeatureToggle, FeatureNumeric, FeatureNumberInput } from '../../base';
 
 export const feature_leg_type: FeatureChoiced = {
   name: 'Leg type',
@@ -91,12 +91,6 @@ export const allow_mismatched_parts_toggle: FeatureToggle = {
   name: 'Allow Mismatched Parts',
   description:
     'Want to go completely crazy with your character design? Use this to select any parts from any species!',
-  component: CheckboxInput,
-};
-
-export const allow_genitals_toggle: FeatureToggle = {
-  name: 'Allow Genital Parts',
-  description: 'Enables if you want to have genitals on your character.',
   component: CheckboxInput,
 };
 
@@ -762,4 +756,9 @@ export const heterochromia_emissive: Feature<boolean[]> = {
 export const vox_bodycolor: Feature<string> = {
   name: 'Vox Bodycolor',
   component: FeatureDropdownInput,
+};
+
+export const body_size: FeatureNumeric = {
+  name: 'Body Size',
+  component: FeatureNumberInput,
 };

@@ -3918,9 +3918,6 @@
 /turf/open/floor/iron/dark/smooth_large,
 /area/ruin/syndicate_lava_base/bar)
 "Ns" = (
-/obj/machinery/vending/dorms{
-	onstation = 0
-	},
 /turf/open/floor/iron,
 /area/ruin/syndicate_lava_base/dormitories)
 "NC" = (

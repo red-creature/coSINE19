@@ -17,7 +17,7 @@ GLOBAL_LIST_EMPTY(cached_mutant_icon_files)
 	///You can also put down a a HEX color, to be used instead as the default
 	var/default_color
 	///Set this to a name, then the accessory will be shown in preferences, if a species can have it. Most accessories have this
-	///Notable things that have it set to FALSE are things that need special setup, such as genitals
+	///Notable things that have it set to FALSE are things that need special setup
 	var/generic
 
 	/// For all the flags that you need to pass from a sprite_accessory to an organ, when it's linked to one.
@@ -39,9 +39,9 @@ GLOBAL_LIST_EMPTY(cached_mutant_icon_files)
 	var/always_color_customizable
 	///Whether the accessory can have a special icon_state to render, i.e. wagging tails
 	var/special_render_case
-	///Special case of whether the accessory should be shifted in the X dimension, check taur genitals for example
+	///Special case of whether the accessory should be shifted in the X dimension
 	var/special_x_dimension
-	///Special case of whether the accessory should have a different icon, check taur genitals for example
+	///Special case of whether the accessory should have a different icon
 	var/special_icon_case
 	///Special case of applying a different color, like MODsuit tails
 	var/special_colorize
@@ -56,8 +56,6 @@ GLOBAL_LIST_EMPTY(cached_mutant_icon_files)
 	var/genetic = FALSE
 	var/uses_emissives = FALSE
 	var/color_layer_names
-	/// If this sprite accessory will be inaccessable if ERP config is disabled
-	var/erp_accessory = FALSE
 
 /datum/sprite_accessory/New()
 	if(!default_color)
@@ -331,12 +329,6 @@ GLOBAL_LIST_EMPTY(cached_mutant_icon_files)
 	icon_state = "leggings-stir-black"
 	use_static = TRUE
 
-/datum/sprite_accessory/socks/leggings/latex
-	name = "Socks - Latex"
-	icon_state = "socks_latex"
-	use_static = TRUE
-	erp_accessory = TRUE
-
 /datum/sprite_accessory/underwear
 	icon = 'modular_skyrat/master_files/icons/mob/clothing/underwear.dmi'
 	///Whether the underwear uses a special sprite for digitigrade style (i.e. briefs, not panties). Adds a "_d" suffix to the icon state
@@ -463,24 +455,6 @@ GLOBAL_LIST_EMPTY(cached_mutant_icon_files)
 	name = "Thong - Alt"
 	icon_state = "thong_babydoll"
 	gender = FEMALE
-
-/datum/sprite_accessory/underwear/chastbelt
-	name = "Chastity Belt"
-	icon_state = "chastbelt"
-	use_static = TRUE
-	erp_accessory = TRUE
-
-/datum/sprite_accessory/underwear/chastcage
-	name = "Chastity Cage"
-	icon_state = "chastcage"
-	use_static = null
-	erp_accessory = TRUE
-
-/datum/sprite_accessory/underwear/latex
-	name = "Panties - Latex"
-	icon_state = "panties_latex"
-	use_static = TRUE
-	erp_accessory = TRUE
 
 /datum/sprite_accessory/undershirt/lizared
 	name = "LIZARED Top"
@@ -687,13 +661,6 @@ GLOBAL_LIST_EMPTY(cached_mutant_icon_files)
 	gender = FEMALE
 	use_static = null
 
-/datum/sprite_accessory/undershirt/bra_latex
-	name = "Bra, Latex"
-	icon_state = "bra_latex"
-	gender = FEMALE
-	use_static = TRUE
-	erp_accessory = TRUE
-
 /datum/sprite_accessory/undershirt/striped_bra
 	name = "Bra - Striped"
 	icon_state = "striped_bra"
@@ -750,41 +717,6 @@ GLOBAL_LIST_EMPTY(cached_mutant_icon_files)
 	icon_state = "corset"
 	gender = FEMALE
 	use_static = TRUE
-
-/datum/sprite_accessory/undershirt/chastbra
-	name = "Chastity Bra"
-	icon_state = "chastbra"
-	gender = FEMALE
-	use_static = TRUE
-	erp_accessory = TRUE
-
-/datum/sprite_accessory/undershirt/pasties
-	name = "Pasties"
-	icon_state = "pasties"
-	gender = FEMALE
-	use_static = null
-	erp_accessory = TRUE
-
-/datum/sprite_accessory/undershirt/pasties_alt
-	name = "Pasties - Alt"
-	icon_state = "pasties_alt"
-	gender = FEMALE
-	use_static = null
-	erp_accessory = TRUE
-
-/datum/sprite_accessory/undershirt/shibari
-	name = "Shibari"
-	icon_state = "shibari"
-	gender = FEMALE
-	use_static = null
-	erp_accessory = TRUE
-
-/datum/sprite_accessory/undershirt/shibari_sleeves
-	name = "Shibari Sleeves"
-	icon_state = "shibari_sleeves"
-	gender = FEMALE
-	use_static = null
-	erp_accessory = TRUE
 
 /datum/sprite_accessory/undershirt/bulletclub //4 life
 	name = "Shirt - Black Skull"
