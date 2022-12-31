@@ -1,0 +1,42 @@
+{
+	"version": 1,
+	"map_name": "Commastation",
+	"map_path": "map_files/Commastation",
+	"map_file": "commastation.dmm",
+	"shuttles": {
+		"emergency": "emergency_delta",
+		"ferry": "ferry_fancy",
+		"cargo": "cargo_delta",
+		"whiteship": "whiteship_delta"
+	},
+	"space_ruin_levels": 0,
+	"space_empty_levels": 0,
+	"traits": [
+		{
+			"Up": 1,
+			"Baseturf": "/turf/mineral/ash_rock",
+			"Linkage": "Null",
+			"Gravity": true
+		},
+		{
+			"Up": 1,
+			"Down": -1,
+			"Baseturf": "/turf/mineral/ash_rock",
+			"Linkage": "Null",
+			"Gravity": true
+		},
+		{
+			"Up": 1,
+			"Down": -1,
+			"Baseturf": "/turf/mineral/ash_rock",
+			"Linkage": "Null",
+			"Gravity": true
+		},
+		{
+			"Down": -1,
+			"Baseturf": "/turf/mineral/ash_rock",
+			"Linkage": "Null",
+			"Gravity": true
+		}
+	]
+}
